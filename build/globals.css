@@ -1,0 +1,268 @@
+
+
+/* == [ imports ] == */
+/* == == == == == == == == == */
+@import url( 'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@500;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
+
+
+/* == [ defaults ] == */
+/* == == == == == == == == == */
+*:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend ),
+*:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::before,
+*:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::after {
+   margin:0; padding:0; box-sizing:border-box;
+}
+
+/* == [ root ] == */
+/* == == == == == == == == == */
+:root {
+   --dark0: #16181c;   --dark1: #1b1d22;
+   --dark2: #212329;   --dark3: #505257;
+
+   --light0: #ffffff;  --light1: #f5f5f5;
+
+   --pink: #905;   --amber: #ffab00;   --red: #ce3635;
+   --azul: #27f;   --green: #006400;   --blue: #149cbe;
+   --texto: #e9e6e3;
+
+   --green-dark: #8b6d19;  --green-light: #a17d1a; --green-bg: #fbf6e9;
+   --purple-dark: #603479;   --purple-light: #965bb9;  --purple-bg: #f4edf7;
+   --red-dark: #902726;    --red-light: #b83232;   --red-bg: #fceeee;
+   --blue-dark: #1c5b6e;   --blue-light: #267d97;  --blue-bg: #ebf6fb;
+
+   --appbar-height: 81px;
+   --appbar-filter-shadow: drop-shadow( #0009 0 0 5px );
+   --sidebar-width: 68px;
+}
+
+
+
+/* == [ scrollbar ] == */
+/* == == == == == == == == == */
+::-webkit-scrollbar {
+   width: 10px;
+}
+::-webkit-scrollbar-track {
+   background: var( --pink );
+   border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+   background: var( --dark0 );
+   border-radius: 5px;
+}
+
+
+/* == [ document ] == */
+/* == == == == == == == == == */
+html {
+   line-height: 1.15;
+   -webkit-text-size-adjust: 100%;
+   
+   background-color: #1b1d22;
+   background-image:   linear-gradient(0deg, #00000000 24px, #212329 25px),
+   linear-gradient(90deg, #00000000 24px, #212329 25px);
+   background: #fff;
+   background-size: 25px 25px;
+}
+
+body {
+   min-height: 100vh;
+   font-family: 'Poppins';
+   -webkit-font-smoothing: antialiased;
+   background: #1b1d22;
+   color: #eee;
+}
+body > main {
+   margin: 0 auto;
+   padding: 2.5rem;
+   display: grid;
+   gap: 5vw;
+}
+
+
+
+/* == [ text ] == */
+/* == == == == == == == == == */
+
+
+t1, t2, t3 {
+   font-weight: bold;
+}
+t { font-size: 1.1rem; display: grid; }
+t1 { color: #905; font-size: 3rem; }
+t2 { font-size: 2.5rem; }
+t3 { font-size: 2rem; }
+
+p { word-wrap: break-word; }
+li { font-size: inherit; }
+
+/* == [ links ] == */
+/* == == == == == == == == == */
+navlink { display: block; cursor: pointer; }
+navlink:hover { color: #27f; transition: .3s ease-in-out; }
+
+a { color: #27f; text-decoration: none; }
+
+
+
+/* == [ appbar ] == */
+/* == == == == == == == == == */
+appbar {
+   display: block;
+   z-index: 9;
+   width: 100%;
+   height: 98px;
+   position: fixed;
+   top: 0; left: 0;
+   background: #f9b5;
+   box-shadow: #f9bd 0 0 0 6px;
+   filter: drop-shadow( #0009 0 0 5px );
+   border-bottom-left-radius: 2rem;
+   border-bottom-right-radius: 2rem;
+   border-bottom: #f27 5px dashed;
+   border-left: #f27 5px dashed;
+   border-right: #f27 5px dashed;
+}
+appbar-body {
+   display: grid;
+   grid-template-columns: auto 1fr auto;
+   width: 99%;
+   height: 81px;
+   margin: 0 auto;
+   background: #f27c;
+   box-shadow: #f27 0 0 0 6px;
+   filter: drop-shadow( #0009 0 0 5px );
+   border-bottom-left-radius: 7ch;
+   border-bottom-right-radius: 7ch;
+   border-bottom: #f9b 5px dashed;
+   border-left: #f9b 5px dashed;
+   border-right: #f9b 5px dashed;
+}
+appbar-body > t1 {
+   color: #f9b;
+   display: grid;
+   place-items: center;
+}
+
+
+/* == [ sidebar ] == */
+/* == == == == == == == == == */
+side-bar {
+   display: grid;
+   grid-template-columns: var( --sidebar-width ) 256px;
+   width: var( --sidebar-width );
+   height: calc( 100% - var( --appbar-height ) );
+   height: 100dvh;
+   margin-top: var( --appbar-height );
+   position: fixed;
+   top: 0; left: 0;
+   z-index: 6;
+   overflow-x: hidden;
+   background: var( --dark0 );
+}
+side-bar::-webkit-scrollbar { width: 0; }
+side-bar home {
+   display: grid;
+   grid-template-columns: repeat( 1, 60px );
+   grid-template-rows: repeat( auto-fill, 62px );
+   justify-content: center;
+   gap: 8px;
+   padding-top: 18px;
+}
+side-bar header {
+   display: grid;
+   width: 100%;
+   height: 100%;
+}
+side-bar dummy {
+   display: grid;
+   width: 100%;
+   height: 100%;
+}
+side-bar footer {
+   display: grid;
+   width: 100%;
+   height: 100%;
+}
+
+
+
+/* == [ card ] == */
+/* == == == == == == == == == */
+card {
+   display: grid;
+   width: clamp( 100px, 90%, 950px );
+   height: 100%;
+   margin: 0 auto;
+   padding: 2rem;
+   background: #f272;
+   box-shadow: #f273 0 0 0 13px;
+   filter: drop-shadow( #9052 0 0 6px );
+   border-radius: 1.5rem;
+   border: 6px dashed #f275;
+}
+card-home {
+   display: block;
+   width: 100%;
+   height: 100%;
+   padding: 1.5em 2.5em;
+   background: #f5f5f5;
+}
+
+
+
+/* == [ input, button ] == */
+/* == == == == == == == == == */
+label {
+   display: grid;
+   overflow-wrap: anywhere;
+   max-width: calc( 100% - 2rem );
+}
+label > :first-child {
+   font-size: 1.5rem;
+   padding: 1ch 0 .5ch;
+}
+label > input {
+   border-radius: 9px;
+   border: transparent;
+   padding: 0.5rem;
+   font-size: 1.1rem;
+   outline: transparent;
+   cursor: pointer;
+}
+label > input:focus-visible {
+}
+fieldset {
+   border-radius: 2rem;
+   margin: 1rem 0;
+   padding: 1rem;
+}
+legend { font-weight: bolder; }
+hr {
+   width: 100%;
+   border: #da05 solid;
+   border-radius: 2rem;
+}
+button, input[type='button'] {
+   padding: 1rem 2rem;
+   border-radius: 0.5em;
+   border: none;
+   background: var( --azul );
+   box-shadow: var( --purple-light ) 0 2px 0 1px;
+   transform: translateY(-1px);
+   font-size: 1.25rem;
+   line-height: 1.75rem;
+   color: #fff;
+   transition: .15s all ease;
+   cursor: pointer;
+}
+button:hover, input[type='button']:hover {
+   box-shadow: var( --purple-light ) 0 4px 0 1px;
+   transform: translateY(-3px);
+   transition: .15s all ease;
+}
+button:active, input[type='button']:active {
+   box-shadow: var( --purple-light ) 0 2px 0 1px;
+   transform: translateY(-1px);
+   transition: .15s all ease;
+}
