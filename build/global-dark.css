@@ -2,7 +2,9 @@
 
 /* == [ imports ] == */
 /* == == == == == == == == == */
-@import url( 'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@500;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
+@import url( 
+   "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@500;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap"
+);
 
 
 /* == [ defaults ] == */
@@ -30,8 +32,33 @@
    --red-dark: #902726;    --red-light: #b83232;   --red-bg: #fceeee;
    --blue-dark: #1c5b6e;   --blue-light: #267d97;  --blue-bg: #ebf6fb;
 
+
+   /* == [ appbar ] == 
+   == == == == == == == == == */
    --appbar-height: 81px;
    --appbar-filter-shadow: drop-shadow( #0009 0 0 5px );
+
+   /* == appbar-light-color == */
+   --appbar-bg-color: #f9b5;
+   --appbar-shadow-color: #f9bd;
+   --appbar-border-color: #f27;
+
+   --appbar-body-bg-color: #f27c;
+   --appbar-body-shadow-color: #f27;
+   --appbar-body-border-color: #f9b;
+
+   /* == appbar-dark-color == */
+   --appbar-bg-color-dark: #16181c;
+   --appbar-shadow-color-dark: #16181c;
+   --appbar-border-color-dark: #da0;
+
+   --appbar-body-bg-color-dark: #1b1d22;
+   --appbar-body-shadow-color-dark: #1b1d22;
+   --appbar-body-border-color-dark: #313339;
+
+
+   /* == [ sidebar ] == 
+   == == == == == == == == == */
    --sidebar-width: 68px;
 }
 
@@ -59,18 +86,28 @@ html {
    -webkit-text-size-adjust: 100%;
    
    background-color: #1b1d22;
-   background-image:   linear-gradient(0deg, #00000000 24px, #212329 25px),
-   linear-gradient(90deg, #00000000 24px, #212329 25px);
+   background-image: linear-gradient( 
+         0deg, #00000000 24px, #212329 25px 
+      ),
+      linear-gradient( 
+         90deg, #00000000 24px, #212329 25px 
+      );
    background: #fff;
    background-size: 25px 25px;
 }
 
 body {
+   width: auto !important;
+   height: fit-content;
    min-height: 100vh;
-   font-family: 'Poppins';
+   font-family: "Poppins";
    -webkit-font-smoothing: antialiased;
-   background: #905;
-   color: #eee;
+   background: var( --dark1 );
+   color: var( --texto );
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 150%;
+   text-overflow: ellipsis;
 }
 body > main {
    margin: 0 auto;
@@ -83,8 +120,6 @@ body > main {
 
 /* == [ text ] == */
 /* == == == == == == == == == */
-
-
 t1, t2, t3 {
    font-weight: bold;
 }
@@ -112,37 +147,38 @@ appbar {
    z-index: 9;
    width: 100%;
    height: 98px;
-   position: fixed;
+   position: sticky;
    top: 0; left: 0;
-   background: #f9b5;
-   box-shadow: #f9bd 0 0 0 6px;
+   background: var( --appbar-bg-color-dark );
+   box-shadow: var( --appbar-shadow-color-dark ) 0 0 0 6px;
    filter: drop-shadow( #0009 0 0 5px );
    border-bottom-left-radius: 2rem;
    border-bottom-right-radius: 2rem;
-   border-bottom: #f27 5px dashed;
-   border-left: #f27 5px dashed;
-   border-right: #f27 5px dashed;
+   border-bottom: var( --appbar-border-color-dark ) 5px dashed;
+   border-left: var( --appbar-border-color-dark ) 5px dashed;
+   border-right: var( --appbar-border-color-dark ) 5px dashed;
 }
 appbar-body {
    display: grid;
    grid-template-columns: auto 1fr auto;
-   width: 99%;
+   width: 98.5%;
    height: 81px;
-   margin: 0 auto;
-   background: #f27c;
-   box-shadow: #f27 0 0 0 6px;
+   margin: 0 auto !important;
+   background: var( --appbar-body-bg-color-dark );
+   box-shadow: var( --appbar-body-shadow-color-dark ) 0 0 0 6px;
    filter: drop-shadow( #0009 0 0 5px );
    border-bottom-left-radius: 7ch;
    border-bottom-right-radius: 7ch;
-   border-bottom: #f9b 5px dashed;
-   border-left: #f9b 5px dashed;
-   border-right: #f9b 5px dashed;
+   border-bottom: var( --appbar-body-border-color-dark ) 5px dashed;
+   border-left: var( --appbar-body-border-color-dark ) 5px dashed;
+   border-right: var( --appbar-body-border-color-dark ) 5px dashed;
 }
 appbar-body > t1 {
    color: #f9b;
    display: grid;
    place-items: center;
 }
+appbar-options { cursor: pointer; }
 
 
 /* == [ sidebar ] == */
@@ -185,6 +221,25 @@ side-bar footer {
    height: 100%;
 }
 
+
+
+/* == [ drawer ] == */
+/* == == == == == == == == == */
+drawer {
+   display: block;
+   width: 69px;
+   height: 100%;
+   background: var( --dark1 );
+
+   position: fixed;
+   top: 0; left: 0;
+   padding-top: 99px !important;
+}
+
+drawer[closed] {
+   display: none;
+}
+      
 
 
 /* == [ card ] == */
@@ -243,26 +298,26 @@ hr {
    border: #da05 solid;
    border-radius: 2rem;
 }
-button, input[type='button'] {
+button, input[type="button"] {
    padding: 1rem 2rem;
    border-radius: 0.5em;
    border: none;
    background: var( --azul );
    box-shadow: var( --purple-light ) 0 2px 0 1px;
-   transform: translateY(-1px);
+   transform: translateY( -1px );
    font-size: 1.25rem;
    line-height: 1.75rem;
    color: #fff;
    transition: .15s all ease;
    cursor: pointer;
 }
-button:hover, input[type='button']:hover {
+button:hover, input[type="button"]:hover {
    box-shadow: var( --purple-light ) 0 4px 0 1px;
-   transform: translateY(-3px);
+   transform: translateY( -3px );
    transition: .15s all ease;
 }
-button:active, input[type='button']:active {
+button:active, input[type="button"]:active {
    box-shadow: var( --purple-light ) 0 2px 0 1px;
-   transform: translateY(-1px);
+   transform: translateY( -1px );
    transition: .15s all ease;
 }
