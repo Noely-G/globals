@@ -178,7 +178,14 @@ appbar-body > t1 {
    display: grid;
    place-items: center;
 }
-appbar-options { cursor: pointer; }
+appbar-options { 
+   cursor: pointer; 
+   font-size: 2.3rem;
+   display: grid;
+   padding: 0 13px;
+   place-items: center;
+   overflow: hidden;
+}
 
 
 /* == [ sidebar ] == */
