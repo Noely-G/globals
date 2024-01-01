@@ -178,7 +178,7 @@ appbar-body > t1 {
    display: grid;
    place-items: center;
 }
-appbar-options { 
+appbar-brand, appbar-options { 
    cursor: pointer; 
    font-size: 2.3rem;
    display: grid;
