@@ -302,11 +302,32 @@ drawer[closed] {
 /* == == == == == == == == == */
 display {
    display: grid;
-   gap: 10px;
+   /* gap: 10px; */
    background: white;
    border: 1px solid #d9d9d9;
    border-radius: 7px;
    padding: 30px 20px;
+}
+
+
+top-bar {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   width: calc( 100% - 5rem );
+   height: 37px;
+   margin: 0 auto;
+   padding: 5px 2rem;
+   background: white;
+   border: 1px solid #d9d9d9;
+   border-radius: 7px;
+   font-size: 15px;
+}
+banner {
+   display: block;
+   background: var( --text-bg-dh );
+   padding: 1vw;
+   border-bottom-left-radius: 7px;
 }
 
 
@@ -399,67 +420,74 @@ video, iframe {
 }
 
 hr { border: #3335 solid 1px !important; }
-   display { display: grid; gap: 10px; }
-   video, iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 13px; }
-   
-   question > h4 {
-      position: relative;
-      left: 44px;
-   }
-   question > h4::before {
-      content: " ";
-      display: block;
-      width: 42px;
-      position: absolute;
-      aspect-ratio: 1/1;
-      background-image: url(https://assets.digitalhouse.com/pg/prod/atoms/sheet-holder.svg);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      left: -44px;
-      top: -40%;
-   }
-   home > header {
-      display: grid;
-      width: 50%;
-      margin: 0 auto;
-      align-items: center;
-   }
-   questions > home > header :first-child {
-      position: relative;
-   }
-   questions > home > header > :first-child::before {
-      content: attr(n);
-      background: var(--text-bg-dh);
-      position: absolute;
-      top: -30%;
-      left: -44px;
-      display: grid;
-      width: 28px;
-      aspect-ratio: 1/1;
-      border-radius: 7px;
-      border: #27f5 1px solid;
-      place-items: center;
-      /* font-size: 1.5em; */
-      font-weight: bold;
-   }
 
-   choices {
-      display: grid;
-      place-items: center;
-      padding: 4vw 0;
-   }
-   [choice] {
-      width: 40%;
-      margin: 8px auto;
-      padding: 15px 16px;
-      border-radius: 23px;
-      border: solid 1px #30303055;
-      cursor: pointer;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-   }
-   [choice="certa"] {
-      border: 1px var( --verde-dh ) solid;
-   }
+video, iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 13px; }
+iframe[live] {
+   aspect-ratio: 1 / 1.37;
+}
+
+question {
+   display: block;
+   padding: 4vw;
+}
+question > h4 {
+   position: relative;
+   left: 44px;
+}
+question > h4::before {
+   content: " ";
+   display: block;
+   width: 42px;
+   position: absolute;
+   aspect-ratio: 1/1;
+   background-image: url(https://assets.digitalhouse.com/pg/prod/atoms/sheet-holder.svg);
+   background-size: contain;
+   background-position: center;
+   background-repeat: no-repeat;
+   left: -44px;
+   top: -40%;
+}
+home > header {
+   display: grid;
+   width: 50%;
+   margin: 0 auto;
+   align-items: center;
+}
+questions > home > header :first-child {
+   position: relative;
+}
+questions > home > header > :first-child::before {
+   content: attr(n);
+   background: var(--text-bg-dh);
+   position: absolute;
+   top: -30%;
+   left: -44px;
+   display: grid;
+   width: 28px;
+   aspect-ratio: 1/1;
+   border-radius: 7px;
+   border: #27f5 1px solid;
+   place-items: center;
+   /* font-size: 1.5em; */
+   font-weight: bold;
+}
+
+choices {
+   display: grid;
+   place-items: center;
+   padding: 4vw 0;
+}
+[choice] {
+   width: 40%;
+   margin: 8px auto;
+   padding: 15px 16px;
+   border-radius: 23px;
+   border: solid 1px #30303055;
+   cursor: pointer;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+[choice="certa"] {
+   border: 1px var( --verde-dh ) solid;
+}

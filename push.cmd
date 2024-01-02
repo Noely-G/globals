@@ -1,4 +1,0 @@
-
-
-@echo off
-push && exit
