@@ -171,13 +171,13 @@ p {
 t1, t2, t3 {
    font-weight: bold;
 }
-t { font-size: 1.1rem; display: grid; }
+t { font-size: 1rem; display: grid; }
 t1 { color: #905; font-size: 3rem; }
 t2 { font-size: 2.5rem; }
 t3 { font-size: 2rem; }
 
 p { word-wrap: break-word; }
-/* li { font-size: inherit; } */
+li, t { font-family: SourceSansPro, sans-serif !important; }
 
 /* == [ links ] == */
 /* == == == == == == == == == */
@@ -400,31 +400,47 @@ video, iframe {
 hr { border: #3335 solid 1px !important; }
    display { display: grid; gap: 10px; }
    video, iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 13px; }
-   questions > h4 {
-      font-weight: 600;
+   
+   question > h4 {
+      position: relative;
+      left: 44px;
    }
-   [destaque] {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      gap: 10px;
-      width: 90%;
-      margin: 0 auto;
-   }
-   [destaque] > img {
-      width: 24px;
+   question > h4::before {
+      content: " ";
+      display: block;
+      width: 42px;
+      position: absolute;
+      aspect-ratio: 1/1;
+      background-image: url(https://assets.digitalhouse.com/pg/prod/atoms/sheet-holder.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      left: -44px;
+      top: -40%;
    }
    home > header {
       display: grid;
-      grid-template-columns: .1fr .9fr;
       width: 50%;
       margin: 0 auto;
       align-items: center;
    }
-   home > header :first-child {
+   questions > home > header :first-child {
+      position: relative;
+   }
+   questions > home > header :first-child::before {
+      content: attr(n);
+      background: var(--text-bg-dh);
+      position: absolute;
+      top: -30%;
+      left: -44px;
+      display: grid;
+      width: 28px;
+      aspect-ratio: 1/1;
+      border-radius: 7px;
+      border: #27f5 1px solid;
+      place-items: center;
       font-size: 1.5em;
       font-weight: bold;
-      background: var( --text-bg-dh );
    }
 
    [choice] {
@@ -439,5 +455,5 @@ hr { border: #3335 solid 1px !important; }
       align-items: center;
    }
    [choice="certa"] {
-      border: 1px #c911ee solid;
+      border: 1px var( --verde-dh ) solid;
    }
