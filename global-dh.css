@@ -52,6 +52,7 @@ colors {
    /* --font-dh: "Source Sans 3, sans-serif"; */
    --azul-dh: #6e57c1;
    --verde-dh: #00823f;
+   --verde-bg-dh: #e3f8ea;
 
    --dark0: #16181c;   --dark1: #1b1d22;
    --dark2: #212329;   --dark3: #505257;
@@ -490,4 +491,5 @@ choices {
 }
 [choice="certa"] {
    border: 1px var( --verde-dh ) solid;
+   background: var( --verde-bg-dh );
 }
