@@ -12,7 +12,7 @@
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend ),
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::before,
 *:not( h1,h2,h3,h4,h5,h6,p,menu,ul,ol,li,hr,pre,dd,blockquote,fieldset,legend )::after {
-   margin:0; padding:0; box-sizing:border-box;
+   margin: 0; padding: 0; box-sizing: border-box;
 }
 
 /* == [ root ] == */
@@ -29,7 +29,7 @@ h1 {
 }
 sub { fsz: 20px; }
 p {
-   font-family SourceSansPro, sans-serif
+   font-family: SourceSansPro, sans-serif
    font-size 16px
    line-height 20px
 }
@@ -47,8 +47,8 @@ colors {
 :root {
    --bg-dh: #f5f5f5;
    --text-dh: #303030;
-   /* --font-dh: "SourceSansPro, sans-serif"; */
-   --font-dh: "Source Sans 3, sans-serif";
+   --font-dh: "SourceSansPro, sans-serif";
+   /* --font-dh: "Source Sans 3, sans-serif"; */
    --azul-dh: #6e57c1;
    --verde-dh: #00823f;
 
@@ -138,7 +138,7 @@ body {
    -webkit-font-smoothing: antialiased;
    background: var( --bg-dh );
    color: var( --text-dh );
-   font-size: 14px;
+   font-size: 1em;
    font-weight: 400;
    line-height: 150%;
    text-overflow: ellipsis;
@@ -147,7 +147,7 @@ body > main {
    margin: 0 auto;
    padding: 2.5rem;
    display: grid;
-   gap: 5vw;
+   gap: 10px;
 }
 
 
@@ -156,13 +156,13 @@ body > main {
 /* == == == == == == == == == */
 h1 {
    font-family: Poppins, sans-serif;
-   font-size: 24px;
+   font-size: 1.5em;
    font-weight: 700;
 }
-sub { display: block; font-size: 20px; }
+sub { display: block; font-size: 1.3em; }
 p {
    font-family: SourceSansPro, sans-serif;
-   font-size: 16px;
+   font-size: 1em;
    line-height: 20px;
 }
 t1, t2, t3 {
