@@ -177,7 +177,7 @@ t2 { font-size: 2.5rem; }
 t3 { font-size: 2rem; }
 
 p { word-wrap: break-word; }
-li { font-size: inherit; }
+/* li { font-size: inherit; } */
 
 /* == [ links ] == */
 /* == == == == == == == == == */
