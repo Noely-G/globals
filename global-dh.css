@@ -428,7 +428,7 @@ hr { border: #3335 solid 1px !important; }
    questions > home > header :first-child {
       position: relative;
    }
-   questions > home > header :first-child::before {
+   questions > home > header > :first-child::before {
       content: attr(n);
       background: var(--text-bg-dh);
       position: absolute;
