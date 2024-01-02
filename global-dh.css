@@ -386,3 +386,7 @@ button:active, input[type="button"]:active {
    transform: translateY( -1px );
    transition: .15s all ease;
 }
+
+
+
+video, iframe { width: 100%; }
