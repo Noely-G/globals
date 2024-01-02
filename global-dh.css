@@ -145,7 +145,7 @@ body {
    line-height: 150%;
    text-overflow: ellipsis;
 }
-body > main {
+body > main, modulo {
    margin: 0 auto;
    padding: 2.5rem;
    display: grid;
