@@ -129,13 +129,14 @@ html {
       );
    background: #fff;
    background-size: 25px 25px;
+   font-family: SourceSansPro, sans-serif !important;
 }
 
 body {
    width: auto !important;
    height: fit-content;
    min-height: 100vh;
-   font-family: var( --font-dh );
+   font-family: SourceSansPro, sans-serif !important;
    -webkit-font-smoothing: antialiased;
    background: var( --bg-dh );
    color: var( --text-dh );
@@ -439,10 +440,15 @@ hr { border: #3335 solid 1px !important; }
       border-radius: 7px;
       border: #27f5 1px solid;
       place-items: center;
-      font-size: 1.5em;
+      /* font-size: 1.5em; */
       font-weight: bold;
    }
 
+   choices {
+      display: grid;
+      place-items: center;
+      padding: 4vw 0;
+   }
    [choice] {
       width: 40%;
       margin: 8px auto;
