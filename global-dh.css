@@ -362,7 +362,7 @@ fieldset {
 legend { font-weight: bolder; }
 hr {
    width: 100%;
-   border: #da05 solid;
+   /* border: #da05 solid; */
    border-radius: 2rem;
 }
 button, input[type="button"] {
@@ -391,4 +391,53 @@ button:active, input[type="button"]:active {
 
 
 
-video, iframe { width: 100%; }
+video, iframe { 
+   width: 100%; 
+   aspect-ratio: 16 / 9; 
+   border-radius: 13px;
+}
+
+hr { border: #3335 solid 1px !important; }
+   display { display: grid; gap: 10px; }
+   video, iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 13px; }
+   questions > h4 {
+      font-weight: 600;
+   }
+   [destaque] {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      width: 90%;
+      margin: 0 auto;
+   }
+   [destaque] > img {
+      width: 24px;
+   }
+   home > header {
+      display: grid;
+      grid-template-columns: .1fr .9fr;
+      width: 50%;
+      margin: 0 auto;
+      align-items: center;
+   }
+   home > header :first-child {
+      font-size: 1.5em;
+      font-weight: bold;
+      background: var( --text-bg-dh );
+   }
+
+   [choice] {
+      width: 40%;
+      margin: 8px auto;
+      padding: 15px 16px;
+      border-radius: 23px;
+      border: solid 1px #30303055;
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+   }
+   [choice="certa"] {
+      border: 1px #c911ee solid;
+   }
