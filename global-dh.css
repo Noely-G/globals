@@ -455,9 +455,11 @@ home > header {
    margin: 0 auto;
    align-items: center;
 }
+quiz > home > header :first-child,
 questions > home > header :first-child {
    position: relative;
 }
+quiz > home > header > :first-child::before,
 questions > home > header > :first-child::before {
    content: attr(n);
    background: var(--text-bg-dh);
