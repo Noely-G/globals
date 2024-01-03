@@ -49,7 +49,6 @@ colors {
    --text-dh: #303030;
    --font-dh: "SourceSansPro, sans-serif";
    --text-bg-dh: #e3f8ea;
-   /* --font-dh: "Source Sans 3, sans-serif"; */
    --azul-dh: #6e57c1;
    --verde-dh: #00823f;
    --verde-bg-dh: #e3f8ea;
@@ -303,7 +302,6 @@ drawer[closed] {
 /* == == == == == == == == == */
 display {
    display: grid;
-   /* gap: 10px; */
    background: white;
    border: 1px solid #d9d9d9;
    border-radius: 7px;
@@ -315,7 +313,7 @@ top-bar {
    display: flex;
    align-items: center;
    gap: 10px;
-   width: calc( 100% - 5rem );
+   width: calc( 100% - 5vw );
    height: 37px;
    margin: 0 auto;
    padding: 5px 2rem;
@@ -385,7 +383,6 @@ fieldset {
 legend { font-weight: bolder; }
 hr {
    width: 100%;
-   /* border: #da05 solid; */
    border-radius: 2rem;
 }
 button, input[type="button"] {
@@ -442,7 +439,7 @@ question > h4::before {
    width: 42px;
    position: absolute;
    aspect-ratio: 1/1;
-   background-image: url(https://assets.digitalhouse.com/pg/prod/atoms/sheet-holder.svg);
+   background-image: url( "https://assets.digitalhouse.com/pg/prod/atoms/sheet-holder.svg" );
    background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
@@ -473,7 +470,6 @@ questions > home > header > :first-child::before {
    border-radius: 7px;
    border: #27f5 1px solid;
    place-items: center;
-   /* font-size: 1.5em; */
    font-weight: bold;
 }
 
