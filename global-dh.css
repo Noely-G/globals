@@ -419,13 +419,14 @@ video, iframe {
    aspect-ratio: 16 / 9; 
    border-radius: 13px;
 }
+picture, picture > img { width: 100%; }
 
 hr { border: #3335 solid 1px !important; }
 
 video, iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 13px; }
-iframe[live] {
-   aspect-ratio: 1 / 1.37;
-}
+iframe[live] { aspect-ratio: 1 / 1.37; }
+iframe[react-installation] { aspect-ratio: 1 / 1.08; }
+iframe[folder-structure] { aspect-ratio: 1 / 1.9; }
 
 question {
    display: block;
@@ -479,7 +480,7 @@ choices {
    padding: 4vw 0;
 }
 [choice] {
-   width: 40%;
+   width: clamp( 236px, 40%, 650px );
    margin: 8px auto;
    padding: 15px 16px;
    border-radius: 23px;
@@ -492,4 +493,29 @@ choices {
 [choice="certa"] {
    border: 1px var( --verde-dh ) solid;
    background: var( --verde-bg-dh );
+}
+
+res {
+   display: grid;
+   border-radius: 7px;
+   background: var( --verde-bg-dh );
+   width: 80%;
+   margin: 0 auto;
+   padding: 2vw;
+   font-size: 14px;
+   color: var( --verde-dh );
+}
+res :first-child {
+   position: relative;
+   font-size: 15px;
+   left: 44px;
+}
+res > ::before {
+   content: "✓";
+   position: absolute;
+   top: 20%; left: -40px;
+   color: var( --verde-dh );
+   font-size: 2rem;
+   font-weight: 700;
+}
 }
