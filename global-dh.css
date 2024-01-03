@@ -502,20 +502,25 @@ res {
    width: 80%;
    margin: 0 auto;
    padding: 2vw;
+   position: relative;
    font-size: 14px;
    color: var( --verde-dh );
 }
 res :first-child {
-   position: relative;
+   width: clamp( 10px, 80%, 990px );
+   margin: 0 0 0 auto;
    font-size: 15px;
-   left: 44px;
+}
+@media screen and ( width >= 800px ) {
+   res :first-child {
+      width: 95%;
+   }
 }
 res > ::before {
    content: "✓";
    position: absolute;
-   top: 20%; left: -40px;
+   top: 40%; left: 15px;
    color: var( --verde-dh );
    font-size: 2rem;
    font-weight: 700;
-}
 }
