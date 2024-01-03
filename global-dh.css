@@ -449,6 +449,7 @@ question > h4::before {
    left: -44px;
    top: -40%;
 }
+home { display: block; padding: 2vw 0; }
 home > header {
    display: grid;
    width: 50%;
