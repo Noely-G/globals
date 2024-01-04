@@ -24,6 +24,7 @@
    --text-bg-dh: #e3f8ea;
    --red-dh: #e8505b;
    --azul-dh: #6e57c1;
+   --azul-bg-dh: #cce5f6;
    --verde-dh: #00823f;
    --verde-bg-dh: #e3f8ea;
    --grey-light-dh: #d9d9d9;
@@ -288,7 +289,7 @@ drawer[closed] {
 
 /* == [ display ] == */
 /* == == == == == == == == == */
-display {
+display, exercicio {
    display: grid;
    background: white;
    border: 1px solid #d9d9d9;
@@ -338,6 +339,10 @@ card-home {
    height: 100%;
    padding: 1.5em 2.5em;
    background: #f5f5f5;
+}
+
+co-de {
+   padding: 5vw 0;
 }
 
 
@@ -535,6 +540,15 @@ res > ::before {
    color: var( --verde-dh );
    font-size: 2rem;
    font-weight: 700;
+}
+
+ticket {
+   display: grid;
+   background: white;
+   border: 1px solid #d9d9d9;
+   border-radius: 7px;
+   padding: 15px 30px;
+   border-left: #3498db 8px solid;
 }
 
 
