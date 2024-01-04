@@ -544,7 +544,7 @@ res > ::before {
 
 ticket {
    display: grid;
-   background: white;
+   background: var( --azul-bg-dh );
    border: 1px solid #d9d9d9;
    border-radius: 7px;
    padding: 15px 30px;
