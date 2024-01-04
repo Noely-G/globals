@@ -49,6 +49,7 @@ colors {
    --text-dh: #303030;
    --font-dh: "SourceSansPro, sans-serif";
    --text-bg-dh: #e3f8ea;
+   --red-dh: #e8505b;
    --azul-dh: #6e57c1;
    --verde-dh: #00823f;
    --verde-bg-dh: #e3f8ea;
@@ -181,6 +182,14 @@ t3 { font-size: 2rem; }
 
 p { word-wrap: break-word; }
 li, t { font-family: SourceSansPro, sans-serif !important; }
+
+ul li::marker {
+   /* content: "\2022"; */
+   color: var( --red-dh );
+   font-size: 31px;
+}
+
+
 
 /* == [ links ] == */
 /* == == == == == == == == == */
