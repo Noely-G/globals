@@ -55,6 +55,10 @@ colors {
    --verde-bg-dh: #e3f8ea;
    --grey-light-dh: #d9d9d9;
 
+   --calendar-dh: url( "./src/img/calendar.png" );
+   --calendar-dh: url( "https://prod-gbl-pg-lnf.digitalhouse.com/tenants/dh/playstrap/images/calendar-module.png" );
+
+
 
    --dark0: #16181c;   --dark1: #1b1d22;
    --dark2: #212329;   --dark3: #505257;
