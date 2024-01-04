@@ -443,6 +443,7 @@ video, iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 13px; }
 iframe[live] { aspect-ratio: 1 / 1.37; }
 iframe[react-installation] { aspect-ratio: 1 / 1.08; }
 iframe[folder-structure] { aspect-ratio: 1 / 1.9; }
+iframe[m-10] { aspect-ratio: 1 / 1.38; }
 [prop-types] {
    aspect-ratio: 1/1.1;
    max-height: 90vh;
