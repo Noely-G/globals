@@ -417,6 +417,8 @@ video, iframe {
    aspect-ratio: 16 / 9; 
    border-radius: 13px;
 }
+
+img { width: 100%; }
 picture, picture > img { width: 100%; }
 
 hr { border: #3335 solid 1px !important; }

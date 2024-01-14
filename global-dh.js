@@ -12,7 +12,9 @@ const
 
 addEventListener( "load", ev => {
 	let 
-		NavLinks = $$( "navlink" )
+		NavLinks = $$( "navlink" ),
+      rightAnswers = $$( "[choice]" ),
+      videoTags = $$( "video" )
    ;
  
    
@@ -21,6 +23,19 @@ addEventListener( "load", ev => {
 			window.open( nv.getAttribute( "to" ), "_blank" );
 		} );
 	} );
+
+   rightAnswers.forEach( ra => {
+      if( ra.getAttribute( "choice" ) != "" ) {
+         ra.querySelector( "input" ).setAttribute( "checked", "checked" );
+         ra.setAttribute( "choice", "certa" );
+         _( "checked" );
+      }
+   } );
+
+   videoTags.forEach( vt => {
+      vt.setAttribute( "controls", "controls" );
+   } );
+
 
 
    /* == [ code template ] == == == == == == == == == */
