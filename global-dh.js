@@ -75,7 +75,7 @@ addEventListener( "load", ev => {
          padding: 10px 0;
          width: calc( 98% - 48px );
          height: calc( 100% - 36px );
-         height: 100;
+         white-space-collapse: break-spaces;
          color: #eee;
       }
    </style>
