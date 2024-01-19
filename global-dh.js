@@ -75,6 +75,8 @@ addEventListener( "load", ev => {
          padding: 10px 0;
          width: calc( 98% - 48px );
          height: calc( 100% - 36px );
+         max-height: 650px;
+         overflow: scroll;
          white-space-collapse: break-spaces;
          color: #eee;
       }

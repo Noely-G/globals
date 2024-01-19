@@ -342,6 +342,8 @@ card-home {
 }
 
 co-de {
+   width: clamp( 100px, 100%, 650px );
+   margin: 0 auto;
    padding: 5vw 0;
 }
 
