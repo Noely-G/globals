@@ -446,6 +446,8 @@ iframe[m-10] { aspect-ratio: 1 / 1.38; }
 
 question {
    display: block;
+   display: grid;
+   gap: 15vw;
    padding: 4vw;
    border-radius: 7px;
    background: var( --verde-bg-dh );
