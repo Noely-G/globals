@@ -290,8 +290,7 @@ drawer[closed] {
 /* == [ display ] == */
 /* == == == == == == == == == */
 display, exercicio {
-   display: grid;
-   gap: 4vw;
+   display: block;
    background: white;
    border: 1px solid #d9d9d9;
    border-radius: 7px;
