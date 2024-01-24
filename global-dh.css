@@ -527,7 +527,20 @@ res {
    font-size: 14px;
    color: var( --verde-dh );
 }
-res :first-child {
+
+res:has( co-de ) {
+   display: grid;
+   border-radius: 7px;
+   background: var(--verde-bg-dh);
+   width: 80%;
+   margin: 0 auto;
+   padding: 2vw;
+   position: unset;
+   font-size: 14px;
+   color: var(--verde-dh);
+}
+
+res:not( co-de ) :first-child {
    width: clamp( 10px, 80%, 990px );
    margin: 0 0 0 auto;
    font-size: 15px;
