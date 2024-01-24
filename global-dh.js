@@ -50,13 +50,14 @@ addEventListener( "load", ev => {
          border-radius: 7px;
       }
       code > top-bar {
-         display: block;
+         display: grid;
          background: #16181c;
+         color: #fc0;
          position: absolute;
          top: 0; left: 0;
          width: 100%;
          height: 36px;
-         padding: 2px;
+         padding: 0 2vw;
       }
       code > side-bar {
          display: block;
@@ -97,6 +98,7 @@ addEventListener( "load", ev => {
          this.shadowRoot.append( code.content.cloneNode( true ) );
          this.shadowRoot.querySelector( "bg" ).innerHTML = this.innerHTML;
          this.shadowRoot.querySelector( "bg" ).style.height = this.getAttribute( "h" );
+         this.shadowRoot.querySelector( "top-bar" ).innerHTML = this.getAttribute( "file" );
    
       } 
       connectedCallback() {
