@@ -80,6 +80,7 @@ addEventListener( "load", ev => {
          max-height: 650px;
          overflow: scroll;
          white-space-collapse: break-spaces;
+         white-space-collapse: preserve-breaks;
          color: #eee;
       }
    </style>
