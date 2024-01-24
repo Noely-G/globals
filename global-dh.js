@@ -51,6 +51,7 @@ addEventListener( "load", ev => {
       }
       code > top-bar {
          display: grid;
+         align-items: center;
          background: #16181c;
          color: #fc0;
          position: absolute;
